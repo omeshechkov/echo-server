@@ -11,10 +11,10 @@ namespace Server
             const string listeningAddress = "127.0.0.1";
             const int port = 9000;
 
-            using (var serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP))
+            using (var serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
             {
                 serverSocket.Bind(new IPEndPoint(IPAddress.Parse(listeningAddress), port));
-                serverSocket.Listen(1024);
+                serverSocket.Listen(1);
 
                 Console.WriteLine($"Listening on {listeningAddress}:{port}");
 

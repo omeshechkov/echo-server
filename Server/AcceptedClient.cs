@@ -33,7 +33,7 @@ namespace Server
 
         private void Run()
         {
-            var buffer = new byte[8096];
+            var buffer = new byte[1024];
 
             while (!_stop)
             {

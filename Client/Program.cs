@@ -14,7 +14,7 @@ namespace Client
 
             var buffer = new byte[1024];
 
-            using (var clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP))
+            using (var clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
             {
                 clientSocket.Connect(new IPEndPoint(IPAddress.Parse(address), port));
                 Console.WriteLine($"Connected to {address}:{port}");
